@@ -1,0 +1,16 @@
+﻿Trapezium1:
+Perimetr = 327.70329614269
+Squares = 5500
+
+Trapezium2:
+Perimetr = 327.70329614269
+Squares = 5500
+
+Rectangle1:
+Perimetr = 320
+Squares = 6000
+
+Circle1:
+Perimetr = 376.991118430775
+Squares = 11309.7335529233
+

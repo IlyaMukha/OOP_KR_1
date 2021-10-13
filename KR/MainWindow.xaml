@@ -1,0 +1,73 @@
+﻿<Window x:Class="KR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk1="http://schemas/xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:KR"
+        xmlns:xctk11="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <WrapPanel Margin="0,0,419,388">
+            <Label Content="Square:"></Label>
+            <Label Name="square" Content=""></Label>
+            <Label Content="Perimetr:"></Label>
+            <Label Name="perimetr" Content=""></Label>
+        </WrapPanel>
+        <Border Width="300" Height="300" HorizontalAlignment="Left" Margin="24,61,0,58"  BorderBrush="Black" BorderThickness="2">
+            <Grid Name="myGrid" Width="300" Height="300" Background="#FFF2F2F2" Margin="-2" />
+        </Border>
+        <WrapPanel Margin="10,377,482,0">
+            <Label Width="50">Color</Label>
+            <xctk11:ColorPicker x:Name="EllipseColor" Width="200" DisplayColorAndName="True" SelectedColorChanged="cp_SelectedColorChanged_1" AvailableColorsSortingMode="HueSaturationBrightness" />
+        </WrapPanel>
+
+        <GroupBox Header="Greate Cirkle" Margin="615,231,10,10">
+            <StackPanel>
+                <WrapPanel>
+                    <Label Width="100">Radius</Label>
+                    <TextBox x:Name="EllipseR" Width="145"/>
+                </WrapPanel>
+
+                <Button Content="Create" Width="75" Height="30" Click="Create_Cirkle" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Greate Rectangle" Height="216" Margin="615,10,10,193">
+            <StackPanel>
+                <WrapPanel>
+                    <Label Width="100">Width</Label>
+                    <TextBox x:Name="RW" Width="145"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Width="100">Height</Label>
+                    <TextBox x:Name="RH" Width="145"></TextBox>
+                </WrapPanel>
+                <Button Content="Create" Width="75" Height="30"  Click="Create_Rectangle" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+
+        <GroupBox Header="Greate T" Margin="378,10,182,10">
+            <StackPanel>
+                <WrapPanel>
+                    <Label Width="100">Top</Label>
+                    <TextBox x:Name="T1" Width="145"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Width="100">Height</Label>
+                    <TextBox x:Name="T2" Width="145"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Width="100">Bottom</Label>
+                    <TextBox x:Name="T3" Width="145"></TextBox>
+                </WrapPanel>
+                <Button Content="Create" Width="75" Height="30"  Click="Create_T" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Perimetrs" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="58" Click="GetPerimeters"/>
+        <Button Content="Squares" HorizontalAlignment="Left" Margin="73,36,0,0" VerticalAlignment="Top" Width="58" Click="GetSquares"/>
+        <Button Content="Save to file" HorizontalAlignment="Left" Margin="136,36,0,0" VerticalAlignment="Top" Width="79" Click="Save"/>
+    </Grid>
+</Window>
